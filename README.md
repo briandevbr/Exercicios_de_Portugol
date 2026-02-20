@@ -95,11 +95,11 @@ O sistema foi desenhado para cobrir todos os cenários de um ano letivo:
 
 ### 1. Média Regular (Ponderada)
 A primeira avaliação utiliza pesos para valorizar o desempenho progressivo:
-> **Fórmula:** ((N1 * 2) + (N2 * 3) + (N3 * 5)) / 10`
+> **Fórmula:** `((N1 * 2) + (N2 * 3) + (N3 * 5)) / 10`
 
 ### 2. O Diferencial: Trabalho Extra
 Caso o aluno realize um trabalho extra, a média é recalculada para elevar o peso de notas maiores:
-> **Fórmula:** RaizQuadrada((Média² + NotaTrabalho²) / 2)`
+> **Fórmula:** `RaizQuadrada((Média² + NotaTrabalho²) / 2)`
 
 ### 3. Tabela de Resultados
 
@@ -116,6 +116,7 @@ Caso o aluno realize um trabalho extra, a média é recalculada para elevar o pe
 
 ## 💻 Exemplo de Execução
 
+```text
 Informe seu nome: João Silva
 Digite sua primeira nota: 8.0
 Digite sua segunda nota: 7.5
