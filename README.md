@@ -1,130 +1,141 @@
-# MAIS BASICO
-# 🧮 Resolução de Equações de Segundo Grau (Bhaskara)
+# 📚 Projetos em Portugol (VisualG)
 
-Este projeto faz parte dos meus estudos iniciais em **Lógica de Programação**. O algoritmo foi desenvolvido em **Portugol** utilizando o **VisualG** para calcular as raízes de uma equação de segundo grau ($ax^2 + bx + c = 0$).
-
-## 🚀 Como Funciona
-O programa solicita os coeficientes `A`, `B` e `C` ao usuário e realiza os seguintes cálculos:
-1.  **Delta ($\Delta$):** Utiliza a fórmula $\Delta = b^2 - 4ac$.
-2.  **Validação de Raízes:**
-    *   Se $\Delta < 0$: Informa que não existem raízes reais.
-    *   Se $\Delta = 0$: Calcula e exibe a única raiz real existente.
-    *   Se $\Delta > 0$: Calcula e exibe as duas raízes reais ($x1$ e $x2$).
-
-## 🛠️ Tecnologias Utilizadas
-*   **Linguagem:** Portugol (Pseudocódigo)
-*   **Ferramenta:** [VisualG 3.0](http://visualg3.com.br) (ou interpretadores compatíveis)
-
-## 💻 Como Executar
-1. Faça o download ou instale o **VisualG**.
-2. Abra o arquivo `.alg` (ou copie o código) dentro do editor do VisualG.
-3. Pressione `F9` para executar o algoritmo.
-4. Siga as instruções no console informando os valores de A, B e C.
+Repositório com exercícios práticos de **Lógica de Programação** utilizando Portugol (VisualG).  
+Os projetos evoluem do básico ao intermediário, cobrindo estruturas fundamentais como variáveis, loops, vetores e validação de dados.
 
 ---
 
-# 📏 Conversor de Medidas (Metros para Outras Unidades)
+## 🟢 Nível Básico
 
-Este projeto é um algoritmo simples desenvolvido em **Portugol** para exercitar conceitos de **operadores aritméticos** e **entrada/saída de dados**. Ele recebe um valor em metros e realiza a conversão para as principais unidades de medida do sistema métrico.
+### 🧮 Equação de Segundo Grau (Bhaskara)
+Calcula as raízes da equação $ax² + bx + c = 0$.
 
-## 🚀 Como Funciona
-O programa solicita ao usuário uma distância em **metros** e calcula automaticamente os equivalentes em:
-*   **Quilômetros (km)**
-*   **Hectômetros (hm)**
-*   **Decâmetros (dam)**
-*   **Decímetros (dm)**
-*   **Centímetros (cm)**
-*   **Milímetros (mm)**
+**Lógica:**
+1. Calcula o delta: $\Delta = b² - 4ac$
+2. Classifica:
+   - $\Delta < 0 \rightarrow$ sem raízes reais
+   - $\Delta = 0 \rightarrow$ uma raiz
+   - $\Delta > 0 \rightarrow$ duas raízes
 
-## 🛠️ Tecnologias Utilizadas
-*   **Linguagem:** Portugol (Pseudocódigo)
-*   **Ferramenta:** [VisualG 3.0](http://visualg3.com.br)
+### 📏 Conversor de Medidas
+Converte comprimento, massa e capacidade.
+*   **Foco:** Operadores aritméticos.
 
-## 💻 Como Executar
-1. Abra o **VisualG**.
-2. Copie o código do arquivo `.alg` e cole no editor.
-3. Pressione `F9`.
-4. Digite o valor em metros quando solicitado e veja as conversões aparecerem no console.
+### 🚗 Aluguel de Veículos
+Calcula o custo total com base em:
+*   R$ 90/dia
+*   R$ 0,50/km
+*   Descontos 
 
----
+### 🔢 Sequência de Fibonacci
+Gera a sequência de Fibonacci com base na quantidade informada.
 
-# 🚗 Calculadora de Aluguel de Veículos
+**Lógica:**
+*   Começa com 0 e 1.
+*   Cada termo = soma dos dois anteriores.
 
-Este algoritmo em **Portugol** simula o sistema de fechamento de conta de uma locadora de carros. O foco aqui foi praticar a **atribuição de valores** e o uso de **fórmulas matemáticas** para processar dados de entrada.
+```pascal
+algoritmo "Sequencia_de_Fibonacci"
+var
+   termo1, termo2, proximotermo: inteiro
+   QuantidadeDeTermos, contador: inteiro
+inicio
+   termo1 <- 0
+   termo2 <- 1
 
-## 🚀 Como Funciona
-O programa calcula o preço total do aluguel com base em duas variáveis principais:
-1.  **Diárias:** Cada dia de aluguel custa **R$ 90,00**.
-2.  **Km Rodados:** Cada quilômetro percorrido custa **R$ 0,20**.
+   escreval("Informe a quantidade de termos: ")
+   leia(QuantidadeDeTermos)
 
-Ao final, o algoritmo soma esses dois valores e apresenta o total a ser pago pelo cliente.
+   escreva(termo1," ",termo2," ")
 
-## 🛠️ Tecnologias Utilizadas
-*   **Linguagem:** Portugol (Pseudocódigo)
-*   **Ferramenta:** [VisualG 3.0](http://visualg3.com.br)
-
-## 💻 Como Executar
-1. Abra o código no **VisualG**.
-2. Execute o programa (tecla `F9`).
-3. Informe a quilometragem e o número de dias.
-4. O sistema exibirá o valor final da locação.
-
----
-# MAIS COMPLEXO
-# 🎓 Analisador Completo de Notas e Frequência
-
-![VisuAlg](https://img.shields.io)
-![Status](https://img.shields.io)
-
-Um sistema robusto desenvolvido em **Portugol (VisuAlg)** para gestão de desempenho estudantil. O algoritmo não apenas calcula médias, mas gerencia faltas, bonificações por trabalho extra e critérios complexos de recuperação.
+   para contador de 3 ate QuantidadeDeTermos faca
+      proximotermo <- termo1 + termo2
+      escreva(proximotermo," ")
+      termo1 <- termo2
+      termo2 <- proximotermo
+   fimpara
+fimalgoritmo
+```
 
 ---
 
-## 🚀 Funcionalidades
+## 🟡 Nível Intermediário
 
-O sistema foi desenhado para cobrir todos os cenários de um ano letivo:
-- **Cálculo de Média Ponderada**: Pesos 2, 3 e 5 para refletir a evolução do aluno.
-- **Gestão de Assiduidade**: Bônus automático de 10% na frequência via atestado médico.
-- **Trabalho Extra**: Melhoria de nota utilizando cálculo de **Média Quadrática**.
-- **Sistema de Recuperação**: Segunda chance para alunos com média entre 4 e 7.
-- **Destaque Acadêmico**: Reconhecimento especial para alunos com excelência (Nota ≥ 9 e Presença ≥ 90%).
+### 📝 Sistema de Correção de Provas
+Simula a correção automática de provas de múltipla escolha.
+
+**Funcionalidades:**
+*   Cadastro de gabarito (5 questões)
+*   Validação de respostas (A até E)
+*   Cadastro de 3 alunos
+*   Correção automática
+*   Cálculo de nota (2 pontos por acerto)
+
+**Ponto de evolução:**
+*   Uso de **vetores**
+*   Uso de **procedimento** (função)
+*   Validação de entrada
+
+```pascal
+algoritmo "Corrigindo_Provas"
+var
+   c,i: inteiro
+   nome: vetor[1..3] de caractere
+   gabarito,resp: vetor[1..5] de caractere
+   nota: vetor[1..3] de real
+
+procedimento validargabarito(var gab: caractere)
+inicio
+   enquanto (gab <> "a") e (gab <> "b") e (gab <> "c") e (gab <> "d") e (gab <> "e") faca
+      escreval("Seleção invalida! tente novamente: ")
+      leia(gab)
+   fimenquanto
+fimprocedimento
+
+inicio
+   para c de 1 ate 5 faca
+      leia(gabarito[c])
+      validargabarito(gabarito[c])
+   fimpara
+
+   para c de 1 ate 3 faca
+      leia(nome[c])
+      para i de 1 ate 5 faca
+         leia(resp[i])
+         validargabarito(resp[i])
+         se (resp[i] = gabarito[i]) entao
+            nota[c] <- nota[c] + 2
+         fimse
+      fimpara
+   fimpara
+
+   para c de 1 ate 3 faca
+      escreval(nome[c],": ",nota[c])
+   fimpara
+fimalgoritmo
+```
 
 ---
 
-## 📊 Regras de Negócio e Cálculos
+## 🔴 Nível Mais Avançado
 
-### 1. Média Regular (Ponderada)
-A primeira avaliação utiliza pesos para valorizar o desempenho progressivo:
-> **Fórmula:** `((N1 * 2) + (N2 * 3) + (N3 * 5)) / 10`
+### 🎓 Analisador de Notas e Frequência
+Sistema completo de avaliação acadêmica.
 
-### 2. O Diferencial: Trabalho Extra
-Caso o aluno realize um trabalho extra, a média é recalculada para elevar o peso de notas maiores:
-> **Fórmula:** `RaizQuadrada((Média² + NotaTrabalho²) / 2)`
+**Regras:**
+*   **Média ponderada:** $(N1 \cdot 2 + N2 \cdot 3 + N3 \cdot 5) / 10$
+*   **Recuperação:** média entre 4 e 7
+*   **Reprovação:** Nota < 4 OU Frequência < 75%
+*   **Destaque:** nota $\ge 9$ e frequência $\ge 90\%$
 
-### 3. Tabela de Resultados
-
-
-| Situação | Condição |
-| :--- | :--- |
-| **Aprovado Direto** | Média $\ge$ 7.0 e Frequência $\ge$ 75% |
-| **Recuperação** | Média entre 4.0 e 6.9 |
-| **Reprovado por Nota** | Média $<$ 4.0 |
-| **Reprovado por Falta** | Frequência $<$ 75% |
-| **Aluno Destaque** 🏆 | Média $\ge$ 9.0 e Frequência $\ge$ 90% |
+**Extras:**
+*   Trabalho extra (melhoria de média)
+*   Controle de frequência
 
 ---
 
-## 💻 Exemplo de Execução
-
-```text
-Informe seu nome: João Silva
-Digite sua primeira nota: 8.0
-Digite sua segunda nota: 7.5
-Digite sua terceira nota: 9.0
-Informe sua frequencia: 85
-Tem atestado(S/N): N
-Sua frequencia foi: 85
-Tem trabalho extra(S/N): S
-Sua nota foi: 9.5
-Sua media final foi: 8.98
-Aprovado
+## ⚙️ Como Executar
+1. Instale o **VisualG**
+2. Abra o arquivo `.alg`
+3. Pressione **F9**
+4. Interaja pelo terminal
