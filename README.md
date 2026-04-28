@@ -61,6 +61,15 @@ fimalgoritmo
 
 ## 🟡 Nível Intermediário
 
+### 🍿 Sistema de reserva de cinema simples
+Simula uma reserva de cinema com a fileira de cadeiras B.
+
+**Funcionalidades:**
+*   Valida se sua cadeira foi ou não reservada 
+*   Utiliza vetores lógicos para a validação
+*   Pode cadastras ate no máximo 9 cadeiras
+*   Looping do codigo para uma nova reserva
+
 ### 📝 Sistema de Correção de Provas
 Simula a correção automática de provas de múltipla escolha.
 
